@@ -18,12 +18,18 @@ gcodefunctions::~gcodefunctions()
 {
 }
 
+/*
+* NOTE: if no value was read for a coordinate, NaN is returned on that coordinate
+* If no value is read for P, S, F, -1 is returned
+* If no value is read for T, -1 is returned
+*/
+
 void gcodefunctions::G0(double X, double Y, double Z, int F) {
-	Serial.print("G0 XYZ: "); Serial.print(X); Serial.print(" "); Serial.print(Y); Serial.print(" "); Serial.print(Z);
+	Serial.print("G0 XYZ - Feedrate: "); Serial.print(X); Serial.print(" "); Serial.print(Y); Serial.print(" "); Serial.print(Z); Serial.print(" "); Serial.println(F);
 }
 
 void gcodefunctions::G1(double X, double Y, double Z, int F) {
-	Serial.print("G1 XYZ: "); Serial.print(X); Serial.print(" "); Serial.print(Y); Serial.print(" "); Serial.println(Z);
+	
 }
 
 void gcodefunctions::G2(double X, double Y, double Z, double I, double J, int F) {
