@@ -6,7 +6,7 @@ A simple, light, ISO G-Code interpreter for Arduino, with customizable G and M r
 The code executed upon calling a G or M function is customizable. For example:
 ```
 void gcodefunctions::G0(double X, double Y, double Z, int F) {
-	.
+  .
   .
   .
 }
