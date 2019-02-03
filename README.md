@@ -1,7 +1,7 @@
 ### Interpret-GCode
 A simple, light, ISO G-Code interpreter for Arduino, with customizable G and M routines.
 
-**Warning: this is still a very primitive version of the project, so contains a bunch of bugs. Yet the calls to the simpler M-code routines should work fine**
+**Warning: this is still a very primitive version of the project, so it supports only a small number of G and M codes and surely contains a bunch of bugs. Yet the calls to the simpler M-code routines should work fine**
 
 The code executed upon calling a G or M function is customizable. For example:
 ```
