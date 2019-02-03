@@ -130,8 +130,8 @@ void gcode::comp(String cmd, int *codes, double *coords) {
 }
 
 void gcode::interpret(String cmd) {
-	int codes[6] = { -2/*G*/, -2/*M*/, -2/*P*/, -2/*S*/, -2/*F*/, -2/*T*/};
-	double coords[5];
+	int codes[6] = { -2/*G*/, -2/*M*/, -1/*P*/, -1/*S*/, -1/*F*/, -1/*T*/};
+	double coords[5] = { NAN,NAN,NAN,NAN,NAN }; //if no data was passed for a coordinate, we know thanks to NAN operator
 	comp(cmd, codes, coords);
 
 	/****Switch G****/
